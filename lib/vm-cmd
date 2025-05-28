@@ -76,6 +76,7 @@ cmd::parse(){
         stop)      core::stop "$@" ;;
         restart)   core::restart "$@" ;;
         add)       core::add "$@" ;;
+        unlock)    core::unlock "$@" ;;
         reset)     core::reset "$@" ;;
         poweroff)  core::poweroff "$@" ;;
         startall)  core::startall ;;

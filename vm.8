@@ -123,6 +123,10 @@
 .Op Fl s Ar size|switch
 .Ar name
 .Nm
+.Cm unlock
+.Op Fl f
+.Ar name
+.Nm
 .Cm reset
 .Op Fl f
 .Ar name
@@ -818,6 +822,12 @@ the network interface to.
 .Pp
 For both types of device, the emulation type will be chosen automatically based
 on the emulation used for the existing guest devices.
+.It Xo
+.Cm unlock
+.Op Fl f
+.Ar name
+.Xc
+Unlocks an instance currently marked as locked.
 .It Xo
 .Cm reset
 .Op Fl f

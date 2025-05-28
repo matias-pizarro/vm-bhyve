@@ -43,6 +43,7 @@ fi
 . "${LIB}/vm-rctl"
 . "${LIB}/vm-run"
 . "${LIB}/vm-switch"
+. "${LIB}/vm-unlock"
 . "${LIB}/vm-util"
 . "${LIB}/vm-zfs"
 

@@ -1,0 +1,18 @@
+#!/bin/sh
+
+core::unlock(){
+    local _name="$1"
+
+    [ -z "${_name}" ] && util::usage
+
+    datastore::get_guest "${_name}" || \
+        util::err "cannot locate configuration file for virtual machine: ${_name}"
+
+    if [ -f "${VM_DS_PATH}/${_name}/run.lock" ]; then
+       unlink "${VM_DS_PATH}/${_name}/run.lock" >/dev/null 2>&1
+    fi
+    if [ -f "${VM_DS_PATH}/${_name}/console" ]; then
+        unlink "${VM_DS_PATH}/${_name}/console" >/dev/null 2>&1
+    fi
+}
+CMD_VALID_LIST="${CMD_VALID_LIST},unlock"

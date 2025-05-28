@@ -328,7 +328,7 @@ To make the autocomplete features available permanently, add the following to yo
 logout/login, or run `source ~/.cshrc` to cause the `.cshrc` file to be reloaded.
 
     complete vm \
-     'p@1@(list create install start stop console configure reset poweroff destroy clone snapshot rollback add switch iso)@' \
+     'p@1@(list create install start stop console configure unlock reset poweroff destroy clone snapshot rollback add switch iso)@' \
      'n@create@n@' \
      'n@list@n@' \
      'n@iso@n@' \
